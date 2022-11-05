@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from "../../components/Button";
 
 import PageTitle from "../../components/PageTitle";
 import TimeTag from "../../components/TimeTag";
@@ -45,15 +46,11 @@ const News: React.FC = () => {
         })}
       </div>
       <div className="text-center pt-10">
-        <button
-          type="button"
-          className="font-bold text-lg bg-purple-main text-white py-3 px-12 
-            rounded-lg hover:opacity-70 disabled:opacity-50"
+        <Button
+          label="Більше новин"
           onClick={handleButtonClick}
           disabled={visibleNewsAmount > newsData.length}
-        >
-          Більше новин
-        </button>
+        />
       </div>
     </div>
   );
