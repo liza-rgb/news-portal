@@ -17,7 +17,7 @@ const Home: React.FC = () => {
             <Hero post={lastPosts[0]} />
           </div>
           <div className="grid grid-cols-2 gap-x-10 gap-y-12 pt-8">
-            {lastPosts.slice(1, 6).map((post) => {
+            {lastPosts.slice(1, 5).map((post) => {
               return <Card post={post} />;
             })}
           </div>
