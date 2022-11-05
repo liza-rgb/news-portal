@@ -7,7 +7,7 @@ import NavBar from "../../components/NavBar";
 const Container: React.FC = () => {
   return (
     <div className="Container">
-      <div className="mx-16 mb-20">
+      <div className="mx-16 mb-10">
         <NavBar />
         <Outlet />
       </div>
