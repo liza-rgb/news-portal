@@ -13,7 +13,7 @@ const Footer = () => {
         <img
           src={require("../../assets/logo-light.png")}
           alt="Газетяр"
-          className="w-52"
+          className="h-[30px]"
         />
         <p className="font-thin text-md pt-8">
           Всі права захищені: <br /> © Газетяр 2022.
