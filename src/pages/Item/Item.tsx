@@ -5,6 +5,7 @@ import { convertToTranslit, findItemByTitle } from "../helpers/translitId";
 
 import PageTitle from "../../components/PageTitle";
 import TimeTag from "../../components/TimeTag";
+import NotFound from "../NotFound";
 
 export enum ItemType {
   NEWS = "news",
@@ -40,7 +41,7 @@ const Item: React.FC<ItemProps> = ({ type }) => {
       </div>
     );
   } else {
-    return <div></div>;
+    return <NotFound />;
   }
 };
 
