@@ -17,7 +17,6 @@ interface BreadCrumbsProps {
 const BreadCrumbs: React.FC<BreadCrumbsProps> = ({ currentPage }) => {
   const location = useLocation();
   const routes = location.pathname.split("/");
-  console.log(routes);
 
   const getName = (route: string) => {
     switch (route) {
