@@ -23,6 +23,40 @@ const Item: React.FC<ItemProps> = ({ type }) => {
   const { id } = useParams();
   const item = findItemByTitle(id || "", type);
 
+  const getContent = (content: any) => {
+    return (
+      <div className="text-lg font-light space-y-5">
+        {content.map((element: any) => {
+          if (element.type === "paragraph") {
+            return <p>{element.details}</p>;
+          }
+          if (element.type === "quote") {
+            return <p className="italic">{element.details}</p>;
+          }
+          if (element.type === "subtitle") {
+            return <p className="font-bold text-center">{element.details}</p>;
+          }
+          if (element.type === "picture") {
+            return (
+              <div>
+                <img
+                  src={element.img}
+                  alt={element.imgTitle}
+                  className="h-[350px] object-cover mx-auto"
+                />
+                <div className="text-center text-sm font-semibold text-black-secondary opacity-50 pt-2">
+                  {element.imgTitle}
+                  <br />
+                  {element.imgSource}
+                </div>
+              </div>
+            );
+          }
+        })}
+      </div>
+    );
+  };
+
   if (item) {
     return (
       <div className="NewsItem pt-5">
@@ -42,7 +76,7 @@ const Item: React.FC<ItemProps> = ({ type }) => {
                 time={item.time}
               />
             </div>
-            <p className="text-lg font-light">{item.description}</p>
+            {getContent(item.content)}
           </div>
           <div className="col-span-4 ml-auto">
             <NewsSummary />
