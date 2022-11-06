@@ -24,7 +24,11 @@ const Item: React.FC<ItemProps> = ({ type }) => {
       <div className="NewsItem pt-5">
         <PageTitle title={item.title} />
         <div className="flex justify-between border-b-2 py-5 mb-5">
-          <a href="/about" className="text-sm text-purple-main underline">
+          <a
+            href="/about"
+            className="text-sm text-purple-main underline"
+            title="Переглянути інформацію про автора"
+          >
             {item.author}
           </a>
           <TimeTag

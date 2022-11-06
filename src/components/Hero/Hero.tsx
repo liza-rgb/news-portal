@@ -22,7 +22,10 @@ const Hero: React.FC<HeroProps> = ({ post }) => {
       />
       <div className="absolute bottom-[30px] px-4 text-white">
         <CategoryTag name={post.category} />
-        <a href={"/posts/" + convertToTranslit(post.title)}>
+        <a
+          href={"/posts/" + convertToTranslit(post.title)}
+          title="Переглянути текст"
+        >
           <h1 className="pb-3 hover:text-purple-main">{post.title}</h1>
         </a>
         <div className="flex">

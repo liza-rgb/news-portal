@@ -13,7 +13,10 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ post }) => {
   return (
-    <a href={"/posts/" + convertToTranslit(post.title)}>
+    <a
+      href={"/posts/" + convertToTranslit(post.title)}
+      title="Переглянути текст"
+    >
       <div
         className="Card max-w-[400px] space-y-3 hover:text-purple-main"
         id={post.id}

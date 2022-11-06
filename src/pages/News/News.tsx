@@ -40,7 +40,10 @@ const News: React.FC = () => {
                 time={news.time}
                 className="text-black-secondary opacity-50 pb-2"
               />
-              <a href={"/news/" + convertToTranslit(news.title)}>
+              <a
+                href={"/news/" + convertToTranslit(news.title)}
+                title="Переглянути новину"
+              >
                 <h4
                   className={
                     "text-lg hover:text-purple-main " +

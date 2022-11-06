@@ -10,21 +10,27 @@ const Footer = () => {
   return (
     <div className="Footer bg-black-regular text-white grid grid-cols-10 px-14 py-10">
       <div className="col-span-3">
-        <img
-          src={require("../../assets/logo-light.png")}
-          alt="Газетяр"
-          className="h-[30px]"
-        />
+        <a href="/" title="До головної">
+          <img
+            src={require("../../assets/logo-light.png")}
+            alt="Газетяр"
+            className="h-[30px]"
+          />
+        </a>
         <p className="font-thin text-md pt-8">
           Всі права захищені: <br /> © Газетяр 2022.
         </p>
       </div>
       <div className="col-span-4">
         <div className="flex space-x-8">
-          <a href="#" title="Мій Telegram">
+          <a href="https://t.me/gazetyar" target="blank" title="Мій Telegram">
             <TelegramIcon className="w-8 h-8 hover:text-purple-main" />
           </a>
-          <a href="#" title="Мій YouTube">
+          <a
+            href="https://www.youtube.com/channel/UCK7AWluPVrfl2vHYAX5Z_dw"
+            target="blank"
+            title="Мій YouTube"
+          >
             <YouTubeIcon className="w-8 h-8 hover:text-purple-main" />
           </a>
           <a href="#" title="Мій TikTok">

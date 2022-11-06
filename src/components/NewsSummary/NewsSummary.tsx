@@ -57,7 +57,7 @@ const NewsSummary: React.FC = () => {
       })}
       <div className="px-3 pt-3 text-center">
         <a
-          href="/"
+          href="/news"
           title="Переглянути всі новини"
           className="bg-purple-main text-white block py-3 font-bold text-md rounded-lg hover:bg-opacity-70"
         >

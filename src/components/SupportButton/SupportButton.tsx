@@ -4,7 +4,8 @@ import { ReactComponent as PiggyBankIcon } from "../../icons/piggy-bank.svg";
 const SupportButton: React.FC = () => {
   return (
     <a
-      href="/"
+      href="https://send.monobank.ua/jar/7RKFqD65x1"
+      target="blank"
       className="relative inline-flex items-center justify-start p-3 
         overflow-hidden font-medium transition-all bg-gradient-to-r 
         from-green-light to-green-dark rounded
