@@ -69,7 +69,7 @@ const Footer = () => {
               Про мене
             </a>
             <a
-              href="/contacts"
+              href="/contact"
               className="block font-bold text-md hover:text-purple-main"
             >
               Контакти
