@@ -1,6 +1,7 @@
 import React from "react";
 
 import { PostsDataProps } from "../../postsData";
+import { convertToTranslit } from "../../pages/helpers/translitId";
 
 import AuthorTag from "../AuthorTag";
 import CategoryTag from "../CategoryTag";
@@ -21,7 +22,9 @@ const Hero: React.FC<HeroProps> = ({ post }) => {
       />
       <div className="absolute bottom-[30px] px-4 text-white">
         <CategoryTag name={post.category} />
-        <h1 className="pb-3 hover:text-purple-main">{post.title}</h1>
+        <a href={"/posts/" + convertToTranslit(post.title)}>
+          <h1 className="pb-3 hover:text-purple-main">{post.title}</h1>
+        </a>
         <div className="flex">
           <AuthorTag author={post.author} />
           <span className="text-sm px-1">—</span>

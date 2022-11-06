@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Button from "../../components/Button";
 
+import newsData from "../../newsData";
+import { convertToTranslit } from "../helpers/translitId";
+
 import PageTitle from "../../components/PageTitle";
 import TimeTag from "../../components/TimeTag";
-import newsData from "../../newsData";
 
 const News: React.FC = () => {
   const [visibleNewsAmount, setVisibleNewsAmount] = useState(10);
@@ -38,9 +40,16 @@ const News: React.FC = () => {
                 time={news.time}
                 className="text-black-secondary opacity-50 pb-2"
               />
-              <h4 className={"text-lg " + getFontWeight(news.is_important)}>
-                {news.title}
-              </h4>
+              <a href={"/news/" + convertToTranslit(news.title)}>
+                <h4
+                  className={
+                    "text-lg hover:text-purple-main " +
+                    getFontWeight(news.is_important)
+                  }
+                >
+                  {news.title}
+                </h4>
+              </a>
             </div>
           );
         })}

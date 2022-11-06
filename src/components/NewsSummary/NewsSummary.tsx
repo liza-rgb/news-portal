@@ -1,6 +1,7 @@
 import React from "react";
 
 import newsData from "../../newsData";
+import { convertToTranslit } from "../../pages/helpers/translitId";
 
 import TimeTag from "../TimeTag";
 import { ReactComponent as ExclamationMarkIcon } from "../../icons/exclamation-mark.svg";
@@ -35,13 +36,19 @@ const NewsSummary: React.FC = () => {
         return (
           <div className={"p-4 space-y-2 " + getBorderStyle(index)}>
             {news.is_important ? importanceTag : ""}
-            <h4
-              className={
-                "hover:text-purple-main " + getFontWeight(news.is_important)
-              }
+            <a
+              href={"/news/" + convertToTranslit(news.title)}
+              title="Переглянути новину"
+              className="block"
             >
-              {news.title}
-            </h4>
+              <h4
+                className={
+                  "hover:text-purple-main " + getFontWeight(news.is_important)
+                }
+              >
+                {news.title}
+              </h4>
+            </a>
             <div className="text-black-secondary opacity-50">
               <TimeTag time={news.time} />
             </div>
