@@ -1,11 +1,12 @@
 import React from "react";
-import AuthorTag from "../AuthorTag";
-import CategoryTag from "../CategoryTag";
+import { POSTS_PAGE_ROUTE } from "../../config/routes";
 
 import { PostsDataProps } from "../../postsData";
+import { convertToTranslit } from "../../pages/helpers/translitId";
 
 import TimeTag from "../TimeTag";
-import { convertToTranslit } from "../../pages/helpers/translitId";
+import AuthorTag from "../AuthorTag";
+import CategoryTag from "../CategoryTag";
 
 interface CardProps {
   post: PostsDataProps;
@@ -14,7 +15,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ post }) => {
   return (
     <a
-      href={"/posts/" + convertToTranslit(post.title)}
+      href={POSTS_PAGE_ROUTE + "/" + convertToTranslit(post.title)}
       title="Переглянути текст"
     >
       <div

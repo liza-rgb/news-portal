@@ -1,4 +1,15 @@
 import React from "react";
+import {
+  ABOUT_PAGE_ROUTE,
+  CONTACT_PAGE_ROUTE,
+  HOME_PAGE_ROUTE,
+  NEWS_PAGE_ROUTE,
+  POSTS_PAGE_ROUTE,
+  TELEGRAM_CHANNEL_LINK,
+  TIKTOK_CHANNEL_LINK,
+  TWITTER_CHANNEL_LINK,
+  YOUTUBE_CHANNEL_LINK,
+} from "../../config/routes";
 
 import SupportButton from "../SupportButton";
 import { ReactComponent as YouTubeIcon } from "../../icons/youtube.svg";
@@ -23,39 +34,35 @@ const Footer = () => {
       </div>
       <div className="col-span-4">
         <div className="flex space-x-8">
-          <a href="https://t.me/gazetyar" target="blank" title="Мій Telegram">
+          <a href={TELEGRAM_CHANNEL_LINK} target="blank" title="Мій Telegram">
             <TelegramIcon className="w-8 h-8 hover:text-purple-main" />
           </a>
-          <a
-            href="https://www.youtube.com/channel/UCK7AWluPVrfl2vHYAX5Z_dw"
-            target="blank"
-            title="Мій YouTube"
-          >
+          <a href={YOUTUBE_CHANNEL_LINK} target="blank" title="Мій YouTube">
             <YouTubeIcon className="w-8 h-8 hover:text-purple-main" />
           </a>
-          <a href="#" title="Мій TikTok">
+          <a href={TIKTOK_CHANNEL_LINK} title="Мій TikTok">
             <TikTokIcon className="w-8 h-8 hover:text-purple-main" />
           </a>
-          <a href="#" title="Мій Twitter">
+          <a href={TWITTER_CHANNEL_LINK} title="Мій Twitter">
             <TwitterIcon className="w-8 h-8 hover:text-purple-main" />
           </a>
         </div>
         <div className="grid grid-cols-2 mt-5">
           <div className="space-y-2">
             <a
-              href="/"
+              href={HOME_PAGE_ROUTE}
               className="block font-bold text-md hover:text-purple-main"
             >
               Головна
             </a>
             <a
-              href="/news"
+              href={NEWS_PAGE_ROUTE}
               className="block font-bold text-md hover:text-purple-main"
             >
               Новини
             </a>
             <a
-              href="/posts"
+              href={POSTS_PAGE_ROUTE}
               className="block font-bold text-md hover:text-purple-main"
             >
               Тексти
@@ -63,13 +70,13 @@ const Footer = () => {
           </div>
           <div className="space-y-2">
             <a
-              href="/about"
+              href={ABOUT_PAGE_ROUTE}
               className="block font-bold text-md hover:text-purple-main"
             >
               Про мене
             </a>
             <a
-              href="/contact"
+              href={CONTACT_PAGE_ROUTE}
               className="block font-bold text-md hover:text-purple-main"
             >
               Контакти

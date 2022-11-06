@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import Button from "../../components/Button";
+import { NEWS_PAGE_ROUTE } from "../../config/routes";
 
 import newsData from "../../newsData";
 import { convertToTranslit } from "../helpers/translitId";
 
+import Button from "../../components/Button";
 import PageTitle from "../../components/PageTitle";
 import TimeTag from "../../components/TimeTag";
 
@@ -41,7 +42,7 @@ const News: React.FC = () => {
                 className="text-black-secondary opacity-50 pb-2"
               />
               <a
-                href={"/news/" + convertToTranslit(news.title)}
+                href={NEWS_PAGE_ROUTE + "/" + convertToTranslit(news.title)}
                 title="Переглянути новину"
               >
                 <h4

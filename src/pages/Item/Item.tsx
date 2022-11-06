@@ -1,12 +1,14 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { ABOUT_PAGE_ROUTE } from "../../config/routes";
 
-import { convertToTranslit, findItemByTitle } from "../helpers/translitId";
+import { findItemByTitle } from "../helpers/translitId";
 
 import PageTitle from "../../components/PageTitle";
 import TimeTag from "../../components/TimeTag";
 import NotFound from "../NotFound";
 import NewsSummary from "../../components/NewsSummary";
+import AuthorTag from "../../components/AuthorTag";
 
 export enum ItemType {
   NEWS = "news",
@@ -29,11 +31,11 @@ const Item: React.FC<ItemProps> = ({ type }) => {
             <PageTitle title={item.title} />
             <div className="flex justify-between border-b-2 py-5 mb-5">
               <a
-                href="/about"
+                href={ABOUT_PAGE_ROUTE}
                 className="text-sm text-purple-main underline"
                 title="Переглянути інформацію про автора"
               >
-                {item.author}
+                <AuthorTag author={item.author} />
               </a>
               <TimeTag
                 className="text-black-secondary opacity-50"

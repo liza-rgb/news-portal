@@ -1,4 +1,5 @@
 import React from "react";
+import { NEWS_PAGE_ROUTE } from "../../config/routes";
 
 import newsData from "../../newsData";
 import { convertToTranslit } from "../../pages/helpers/translitId";
@@ -37,7 +38,7 @@ const NewsSummary: React.FC = () => {
           <div className={"p-4 space-y-2 " + getBorderStyle(index)}>
             {news.is_important ? importanceTag : ""}
             <a
-              href={"/news/" + convertToTranslit(news.title)}
+              href={NEWS_PAGE_ROUTE + "/" + convertToTranslit(news.title)}
               title="Переглянути новину"
               className="block"
             >
