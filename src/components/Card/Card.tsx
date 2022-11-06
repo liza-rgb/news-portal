@@ -26,7 +26,7 @@ const Card: React.FC<CardProps> = ({ post }) => {
           src={post.image}
           alt={post.title}
           title={post.title}
-          className="h-[246px] w-full"
+          className="h-[246px] w-full object-cover"
         />
         <CategoryTag name={post.category} className="text-purple-main" />
         <h4>{post.title}</h4>

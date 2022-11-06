@@ -19,7 +19,7 @@ const Hero: React.FC<HeroProps> = ({ post }) => {
         src={post.image}
         alt={post.title}
         title={post.title}
-        className="h-[500px] w-full"
+        className="h-[500px] w-full object-cover"
       />
       <div className="absolute bottom-[30px] px-4 text-white">
         <CategoryTag name={post.category} />
