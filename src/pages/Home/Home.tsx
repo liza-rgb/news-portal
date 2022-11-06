@@ -10,7 +10,7 @@ const Home: React.FC = () => {
   const lastPosts = postsData.slice(-6).reverse();
 
   return (
-    <div className="Home mt-3">
+    <div className="Home mt-5">
       <div className="grid grid-cols-11">
         <div className="col-span-7">
           <div>
