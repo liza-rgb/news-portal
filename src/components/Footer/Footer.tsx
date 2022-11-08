@@ -19,21 +19,21 @@ import { ReactComponent as TwitterIcon } from "../../icons/twitter.svg";
 
 const Footer = () => {
   return (
-    <div className="Footer bg-black-regular text-white grid grid-cols-10 px-14 py-10">
-      <div className="col-span-3">
+    <div className="Footer bg-black-regular text-white grid grid-cols-1 sm:grid-cols-10 lg:px-14 md:px-10 px-8 lg:py-10 md:py-8 py-5">
+      <div className="sm:col-span-3 max-sm:py-7">
         <a href="/" title="До головної">
           <img
             src={require("../../assets/logo-light.png")}
             alt="Газетяр"
-            className="h-[30px]"
+            className="h-[30px] max-sm:mx-auto"
           />
         </a>
-        <p className="font-thin text-md pt-8">
+        <p className="font-thin md:text-md text-sm max-sm:pt-3 sm:pt-8 max-sm:text-center">
           Всі права захищені: <br /> © Газетяр 2022.
         </p>
       </div>
-      <div className="col-span-4">
-        <div className="flex space-x-8">
+      <div className="sm:col-span-4 max-sm:order-first">
+        <div className="flex sm:space-x-8 space-x-12 justify-center">
           <a href={TELEGRAM_CHANNEL_LINK} target="blank" title="Мій Telegram">
             <TelegramIcon className="w-8 h-8 hover:text-purple-main" />
           </a>
@@ -47,7 +47,7 @@ const Footer = () => {
             <TwitterIcon className="w-8 h-8 hover:text-purple-main" />
           </a>
         </div>
-        <div className="grid grid-cols-2 mt-5">
+        <div className="sm:grid grid-cols-2 mt-5 text-center hidden">
           <div className="space-y-2">
             <a
               href={HOME_PAGE_ROUTE}
@@ -84,9 +84,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="col-span-3 text-center">
+      <div className="sm:col-span-3 text-center sm:text-right">
         <SupportButton />
-        <div className="text-md font-thin pt-5">
+        <div className="md:text-md text-sm font-thin sm:pt-5 pt-3">
           <p>Підтримай Газетяр.</p>
           <p>Ми працюємо для тебе.</p>
         </div>
