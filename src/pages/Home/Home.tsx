@@ -11,18 +11,18 @@ const Home: React.FC = () => {
 
   return (
     <div className="Home mt-5">
-      <div className="grid grid-cols-11">
-        <div className="col-span-7">
+      <div className="grid md:grid-cols-11 sm:grid-cols-1">
+        <div className="md:col-span-7">
           <div>
             <Hero post={lastPosts[0]} />
           </div>
-          <div className="grid grid-cols-2 gap-x-10 gap-y-12 pt-8">
+          <div className="grid sm:grid-cols-2 gap-y-12 md:max-lg:gap-y-5 gap-x-7 pt-8 sm:max-md:w-[730px] xs:max-sm:w-[500px] xs:max-sm:mt-3 mx-auto">
             {lastPosts.slice(1, 5).map((post) => {
               return <Card post={post} />;
             })}
           </div>
         </div>
-        <div className="col-span-4 ml-auto">
+        <div className="md:col-span-4 sm:max-md:mx-auto md:ml-auto pt-8 md:pt-0 xs:max-sm:w-[500px] max-xs:px-3 max-sm:mx-auto">
           <NewsSummary />
         </div>
       </div>
