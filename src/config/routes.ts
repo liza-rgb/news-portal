@@ -15,4 +15,4 @@ export const TELEGRAM_CHANNEL_LINK = "https://t.me/gazetyar";
 export const YOUTUBE_CHANNEL_LINK =
   "https://www.youtube.com/channel/UCK7AWluPVrfl2vHYAX5Z_dw";
 export const TIKTOK_CHANNEL_LINK = "";
-export const TWITTER_CHANNEL_LINK = "";
+export const TWITTER_CHANNEL_LINK = "https://twitter.com/gazetyar";
