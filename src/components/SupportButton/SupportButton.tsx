@@ -24,7 +24,7 @@ const SupportButton: React.FC = () => {
         duration-300 ease-in-out group-hover:text-green-dark flex"
       >
         <PiggyBankIcon className="h-[20px] w-[20px]" />
-        <span className="ml-2 hidden lg:inline">Підтримати</span>
+        <span className="ml-2 hidden md:inline">Підтримати</span>
       </span>
     </a>
   );
