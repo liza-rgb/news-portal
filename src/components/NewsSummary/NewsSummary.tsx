@@ -31,7 +31,7 @@ const NewsSummary: React.FC = () => {
   };
 
   return (
-    <div className="NewsSummary w-[432px] bg-black-background border-t-4 border-purple-main py-4">
+    <div className="NewsSummary xl:w-[432px] lg:w-[340px] md:w-[315px] sm:w-[730px] bg-black-background border-t-4 border-purple-main py-4">
       <h2 className="text-md px-4">Останні новини</h2>
       {lastNews.map((news, index) => {
         return (
@@ -44,7 +44,8 @@ const NewsSummary: React.FC = () => {
             >
               <h4
                 className={
-                  "hover:text-purple-main " + getFontWeight(news.is_important)
+                  "hover:text-purple-main max-xl:text-md " +
+                  getFontWeight(news.is_important)
                 }
               >
                 {news.title}
