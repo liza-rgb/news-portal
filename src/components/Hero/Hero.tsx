@@ -19,9 +19,9 @@ const Hero: React.FC<HeroProps> = ({ post }) => {
         src={post.image}
         alt={post.title}
         title={post.title}
-        className="h-[500px] w-full object-cover"
+        className="xl:h-[500px] lg:h-[330px] md:h-[300px] sm:h-[450px] max-xs:h-[420px] w-full object-cover brightness-50"
       />
-      <div className="absolute bottom-[30px] px-4 text-white">
+      <div className="absolute md:bottom-[30px] md:px-4 bottom-[40px] px-10 text-white">
         <CategoryTag name={post.category} />
         <a
           href={POSTS_PAGE_ROUTE + "/" + convertToTranslit(post.title)}
