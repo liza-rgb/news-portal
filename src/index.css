@@ -21,4 +21,7 @@
   h4 {
     @apply text-[18px] leading-[22px];
   }
+  a {
+    @apply block;
+  }
 }
