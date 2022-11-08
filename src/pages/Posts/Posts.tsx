@@ -16,14 +16,16 @@ const Posts: React.FC = () => {
   };
 
   return (
-    <div className="Posts pt-5">
-      <PageTitle title="Тексти" />
-      <div className="grid grid-cols-3 gap-14 pt-10">
+    <div className="Posts pt-5 sm:max-md:w-[700px] xs:max-sm:w-[550px] max-md:mx-auto">
+      <div className="max-xs:px-4">
+        <PageTitle title="Тексти" />
+      </div>
+      <div className="grid md:grid-cols-3 sm:grid-cols-2 xl:gap-14 lg:gap-8 md:gap-4 sm:gap-8 max-sm:gap-y-10 pt-10">
         {visiblePosts.map((post) => {
           return <Card post={post} />;
         })}
       </div>
-      <div className="text-center pt-20">
+      <div className="text-center pt-5">
         <Button
           label="Більше текстів"
           onClick={handleButtonClick}
