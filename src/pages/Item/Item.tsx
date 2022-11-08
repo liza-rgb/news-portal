@@ -59,9 +59,9 @@ const Item: React.FC<ItemProps> = ({ type }) => {
 
   if (item) {
     return (
-      <div className="NewsItem pt-5">
-        <div className="grid grid-cols-11">
-          <div className="col-span-7">
+      <div className="NewsItem pt-5 max-md:px-4">
+        <div className="grid md:grid-cols-11 sm:grid-cols-1">
+          <div className="md:col-span-7">
             <PageTitle title={item.title} />
             <div className="flex justify-between border-b-2 py-5 mb-5">
               <a
@@ -78,7 +78,7 @@ const Item: React.FC<ItemProps> = ({ type }) => {
             </div>
             {getContent(item.content)}
           </div>
-          <div className="col-span-4 ml-auto">
+          <div className="md:col-span-4 sm:max-md:mx-auto md:ml-auto pt-8 md:pt-0 xs:max-sm:w-[500px] max-xs:px-3 max-sm:mx-auto">
             <NewsSummary />
           </div>
         </div>
