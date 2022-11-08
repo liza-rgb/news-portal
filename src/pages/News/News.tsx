@@ -31,7 +31,7 @@ const News: React.FC = () => {
   };
 
   return (
-    <div className="News max-w-[850px] mx-auto my-10">
+    <div className="News max-xs:px-4 xs:max-w-[600px] sm:max-w-[700px] md:max-w-[850px] mx-auto pt-5">
       <PageTitle title="Новини" />
       <div className="pt-5">
         {visibleNews.map((news, index) => {
@@ -47,7 +47,7 @@ const News: React.FC = () => {
               >
                 <h4
                   className={
-                    "text-lg hover:text-purple-main " +
+                    "text-lg hover:text-purple-main max-xs:text-lg " +
                     getFontWeight(news.is_important)
                   }
                 >
@@ -58,7 +58,7 @@ const News: React.FC = () => {
           );
         })}
       </div>
-      <div className="text-center pt-10">
+      <div className="text-center">
         <Button
           label="Більше новин"
           onClick={handleButtonClick}
