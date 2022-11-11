@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NEWS_PAGE_ROUTE } from "../../config/routes";
 
 import newsData from "../../newsData";
@@ -9,6 +9,10 @@ import PageTitle from "../../components/PageTitle";
 import TimeTag from "../../components/TimeTag";
 
 const News: React.FC = () => {
+  useEffect(() => {
+    document.title = "Газетяр: Новини";
+  }, []);
+
   const [visibleNewsAmount, setVisibleNewsAmount] = useState(10);
   const visibleNews = newsData.slice(-visibleNewsAmount).reverse();
 

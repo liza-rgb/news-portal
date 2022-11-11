@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const NotFound: React.FC = () => {
+  useEffect(() => {
+    document.title = "Сторінку не знайдено";
+  }, []);
+
   return (
     <div className="NotFound text-center py-32">
       <h1 className="text-2xl text-purple-main">Помилка 404</h1>

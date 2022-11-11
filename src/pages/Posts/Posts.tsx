@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import postsData from "../../postsData";
 
@@ -7,6 +7,10 @@ import Card from "../../components/Card";
 import Button from "../../components/Button";
 
 const Posts: React.FC = () => {
+  useEffect(() => {
+    document.title = "Газетяр: Тексти";
+  }, []);
+
   const [visiblePostsAmount, setVisiblePostsAmount] = useState(9);
   const visiblePosts = postsData.slice(-visiblePostsAmount).reverse();
 

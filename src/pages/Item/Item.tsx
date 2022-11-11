@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { ABOUT_PAGE_ROUTE } from "../../config/routes";
 
@@ -22,6 +22,12 @@ interface ItemProps {
 const Item: React.FC<ItemProps> = ({ type }) => {
   const { id } = useParams();
   const item = findItemByTitle(id || "", type);
+
+  useEffect(() => {
+    if (item) {
+      document.title = item.title;
+    }
+  }, []);
 
   const getContent = (content: any) => {
     return (

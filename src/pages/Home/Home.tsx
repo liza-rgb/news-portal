@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import postsData from "../../postsData";
 
@@ -7,6 +7,10 @@ import NewsSummary from "../../components/NewsSummary";
 import Card from "../../components/Card";
 
 const Home: React.FC = () => {
+  useEffect(() => {
+    document.title = "Газетяр: Головна";
+  }, []);
+
   const lastPosts = postsData.slice(-6).reverse();
 
   return (
