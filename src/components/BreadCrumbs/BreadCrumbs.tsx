@@ -40,7 +40,7 @@ const BreadCrumbs: React.FC<BreadCrumbsProps> = ({ currentPage }) => {
       {routes.map((route, index) => {
         if (index < routes.length - 1) {
           return (
-            <div className="flex space-x-1">
+            <div className="flex space-x-1" key={index}>
               <a href={"/" + route} className="hover:text-purple-main">
                 {getName(route)}
               </a>
@@ -48,7 +48,7 @@ const BreadCrumbs: React.FC<BreadCrumbsProps> = ({ currentPage }) => {
             </div>
           );
         }
-        return <div>{getName(route)}</div>;
+        return <div key={index}>{getName(route)}</div>;
       })}
     </div>
   );

@@ -32,19 +32,27 @@ const Item: React.FC<ItemProps> = ({ type }) => {
   const getContent = (content: any) => {
     return (
       <div className="text-lg space-y-5">
-        {content.map((element: any) => {
+        {content.map((element: any, index: number) => {
           if (element.type === "paragraph") {
-            return <p>{element.details}</p>;
+            return <p key={index}>{element.details}</p>;
           }
           if (element.type === "quote") {
-            return <p className="italic">{element.details}</p>;
+            return (
+              <p key={index} className="italic">
+                {element.details}
+              </p>
+            );
           }
           if (element.type === "subtitle") {
-            return <p className="font-bold text-center">{element.details}</p>;
+            return (
+              <p key={index} className="font-bold text-center">
+                {element.details}
+              </p>
+            );
           }
           if (element.type === "picture") {
             return (
-              <div>
+              <div key={index}>
                 <img
                   src={element.img}
                   alt={element.imgTitle}

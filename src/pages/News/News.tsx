@@ -40,7 +40,7 @@ const News: React.FC = () => {
       <div className="pt-5">
         {visibleNews.map((news, index) => {
           return (
-            <div className={"py-5 " + getBorderStyle(index)}>
+            <div className={"py-5 " + getBorderStyle(index)} key={index}>
               <TimeTag
                 time={news.time}
                 className="text-black-secondary opacity-50 pb-2"

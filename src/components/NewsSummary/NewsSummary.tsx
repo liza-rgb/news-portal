@@ -35,7 +35,7 @@ const NewsSummary: React.FC = () => {
       <h2 className="text-md px-4">Останні новини</h2>
       {lastNews.map((news, index) => {
         return (
-          <div className={"p-4 space-y-2 " + getBorderStyle(index)}>
+          <div className={"p-4 space-y-2 " + getBorderStyle(index)} key={index}>
             {news.is_important ? importanceTag : ""}
             <a
               href={NEWS_PAGE_ROUTE + "/" + convertToTranslit(news.title)}

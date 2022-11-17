@@ -21,8 +21,8 @@ const Home: React.FC = () => {
             <Hero post={lastPosts[0]} />
           </div>
           <div className="grid sm:grid-cols-2 gap-y-12 md:max-lg:gap-y-5 gap-x-7 pt-8 sm:max-md:w-[730px] xs:max-sm:w-[500px] xs:max-sm:mt-3 mx-auto">
-            {lastPosts.slice(1, 5).map((post) => {
-              return <Card post={post} />;
+            {lastPosts.slice(1, 5).map((post, index) => {
+              return <Card post={post} key={index} />;
             })}
           </div>
         </div>

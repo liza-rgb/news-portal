@@ -25,8 +25,8 @@ const Posts: React.FC = () => {
         <PageTitle title="Тексти" />
       </div>
       <div className="grid md:grid-cols-3 sm:grid-cols-2 xl:gap-14 lg:gap-8 md:gap-4 sm:gap-8 max-sm:gap-y-10 pt-10">
-        {visiblePosts.map((post) => {
-          return <Card post={post} />;
+        {visiblePosts.map((post, index) => {
+          return <Card post={post} key={index} />;
         })}
       </div>
       <div className="text-center pt-5">
