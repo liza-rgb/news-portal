@@ -6,7 +6,7 @@ import { ItemType } from "../Item/Item";
 export const convertToTranslit = (str: string) => {
   str = str
     .toLowerCase()
-    .replace(/[&\/\\#,+()$~%.'":*?<>{}-«»—“”]/g, "")
+    .replace(/[&/\\#,+()$~%.'":*?<>{}-«»—“”]/g, "")
     .replace(/ +(?= )/g, "");
   return cyrillicToTranslit({ preset: "uk" }).transform(str, "-");
 };
