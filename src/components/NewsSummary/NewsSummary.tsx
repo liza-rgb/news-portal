@@ -21,7 +21,7 @@ const NewsSummary: React.FC = () => {
     if (is_important) {
       return "font-bold";
     }
-    return "font-light";
+    return "font-normal";
   };
 
   const getBorderStyle = (index: number) => {

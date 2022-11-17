@@ -36,7 +36,7 @@ const BreadCrumbs: React.FC<BreadCrumbsProps> = ({ currentPage }) => {
   };
 
   return (
-    <div className="BreadCrumbs text-sm font-light flex space-x-1">
+    <div className="BreadCrumbs text-sm flex space-x-1">
       {routes.map((route, index) => {
         if (index < routes.length - 1) {
           return (

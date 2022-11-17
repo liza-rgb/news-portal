@@ -31,7 +31,7 @@ const Item: React.FC<ItemProps> = ({ type }) => {
 
   const getContent = (content: any) => {
     return (
-      <div className="text-lg font-light space-y-5">
+      <div className="text-lg space-y-5">
         {content.map((element: any) => {
           if (element.type === "paragraph") {
             return <p>{element.details}</p>;
@@ -58,6 +58,7 @@ const Item: React.FC<ItemProps> = ({ type }) => {
               </div>
             );
           }
+          return "";
         })}
       </div>
     );
