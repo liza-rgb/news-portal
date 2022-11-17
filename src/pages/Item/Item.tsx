@@ -27,7 +27,7 @@ const Item: React.FC<ItemProps> = ({ type }) => {
     if (item) {
       document.title = item.title;
     }
-  }, []);
+  }, [item]);
 
   const getContent = (content: any) => {
     return (
