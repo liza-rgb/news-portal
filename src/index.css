@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  html {
+  body {
     @apply font-montserrat text-black-main;
   }
   svg * {
